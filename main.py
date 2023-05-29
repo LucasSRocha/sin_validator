@@ -53,9 +53,9 @@ def main() -> None:
     )
     args = parser.parse_args()
     sin_numbers = {i.strip() for i in args.sin_number.split(",")}
-    validation_message = "{number} is a {valid} SIN number :)"
+    validation_message = "{number} is {valid} SIN number."
     for number in sin_numbers:
-        valid_message = "Valid" if SinValidator.validate(number) else "Invalid"
+        valid_message = "a valid" if SinValidator.validate(number) else "an invalid"
         print(validation_message.format(number=SinValidator.string_space_clean(number), valid=valid_message))
 
 

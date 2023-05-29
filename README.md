@@ -36,9 +36,9 @@ options:
 example:
 ```shell
 $ python main.py "000 000    000, 046454286, 046 4 542 96"
-000000000 is a Invalid SIN number :)
-046454296 is a Invalid SIN number :)
-046454286 is a Valid SIN number :)
+046454296 is an invalid SIN number.
+000000000 is an invalid SIN number.
+046454286 is a valid SIN number.
 ```
 
 
@@ -92,4 +92,4 @@ The idea here was:
 I've designed it in a way that if a function fails it will fail fast and not go through other validation functions unecessarily. Also, if by any chance we need more validation methods we can include then in the tuple in the order we want to go throught without needing to change how the function works. i.e. _guarantee_only_digits
 
 ### Overall
-This is a simple test, we can go on and on trying to make it special but we might be considering time to deliver so I tried to approach it in the simplest way possible but safely with tests that guarantee the edge cases that might happen.
+This is a simple test, we can go on and on trying to make it special but we might be considering time to deliver so I tried to approach it in the simplest way possible but safely, with tests that guarantee the edge cases that might happen.
